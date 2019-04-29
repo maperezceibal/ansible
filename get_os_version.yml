@@ -1,11 +1,7 @@
----
-- hosts: testmachine
-user: ec2-user
-sudo: yes
-tasks:
-- name: Update all packages to latest
-yum: name=* state=latest
-
-task:
-- name: obtain OS version
-shell: Redhat-release
+- name: Print linux distribution and version
+  hosts: all
+  tasks:
+    - name: capture output of id command
+      command: cat /etc/system-release
+      register: login
+    - debug: msg="{{ login.stdout }}"

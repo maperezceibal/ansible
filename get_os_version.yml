@@ -1,8 +1,11 @@
 ---
-- debug:
-    msg: "{{ hostvars[inventory_hostname].ansible_distribution }}"
-- debug:
-    msg: "{{ hostvars[inventory_hostname].ansible_distribution_major_version }}"
-- debug:
-    msg: "{{ hostvars[inventory_hostname].ansible_distribution_version }}"
+- hosts: testmachine
+user: ec2-user
+sudo: yes
+tasks:
+- name: Update all packages to latest
+yum: name=* state=latest
 
+task:
+- name: obtain OS version
+shell: Redhat-release

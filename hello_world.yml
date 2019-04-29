@@ -1,6 +1,6 @@
-- name: Hello World Sample
+- name: Ejemplo de Hola Mono!
   hosts: all
   tasks:
-    - name: Hello Message
+    - name: Mensajito!
       debug:
-        msg: "Hello World!"
+        msg: "Hola Mono!"

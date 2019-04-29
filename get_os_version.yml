@@ -2,6 +2,6 @@
   hosts: all
   tasks:
     - name: capture output of id command
-      command: cat /etc/system-release
+      command: uname -a
       register: login
     - debug: msg="{{ login.stdout }}"

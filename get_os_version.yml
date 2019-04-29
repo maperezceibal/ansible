@@ -2,6 +2,6 @@
   hosts: all
   tasks:
     - name: capture output of id command
-      command: uname -a
+      command: cat /etc/issue
       register: login
     - debug: msg="{{ login.stdout }}"

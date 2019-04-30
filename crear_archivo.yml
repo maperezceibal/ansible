@@ -4,5 +4,5 @@
     copy:
       dest: "/home/odroid/ARCHIVO.txt"
       content: |
-        Hola
-        Mundo!
+        Hola,
+        Como te va?!

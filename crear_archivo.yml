@@ -4,7 +4,6 @@
     copy:
       dest: "/home/odroid/ARCHIVO.txt"
       content: |
-        dog1
-        tiger
-
+        Hola
+        Mundo!
 output

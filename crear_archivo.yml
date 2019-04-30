@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+  - name: Ansible, crear archivo de ejemplo.
+    copy:
+      dest: "/home/odroid/ARCHIVO.txt"
+      content: |
+        dog1
+        tiger
+
+output
